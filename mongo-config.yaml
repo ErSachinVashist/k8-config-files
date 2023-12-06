@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: mongo-config
 data:
-  MONGODB_HOST: mongo-service
-  MONGODB_DB: codeacademy
+  mongo-url: mongo-service
+  mongo-db: codeacademy
