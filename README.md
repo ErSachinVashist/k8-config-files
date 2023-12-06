@@ -50,3 +50,38 @@ If you can't access the NodePort service webapp with `MinikubeIP:NodePort`, exec
 * webapp image on Docker Hub: https://hub.docker.com/repository/docker/nanajanashia/k8s-demo-app
 * k8s official documentation: https://kubernetes.io/docs/home/
 * webapp code repo: https://gitlab.com/nanuchi/developing-with-docker/-/tree/feature/k8s-in-hour
+
+
+<br />
+
+#### DEMO commands
+
+Installation
+* Docker installed and running
+* Install Minikube & follow steps from Minikube site (kubectl gets installed as dependency)
+* minikube start --driver docker
+* minikube status
+
+Prerequisite Images
+1. docker pull mongo:5.0
+2. docker pull sachinvashist/nextjs-docker:latest
+	
+Cluster Setup
+* git clone https://github.com/ErSachinVashist/k8-config-files.git
+* cd k8-config-files
+* kubectl apply -f mongo-config.yaml
+* kubectl apply -f mongo-secret.yaml
+* kubectl apply -f mongo.yaml
+* kubectl apply -f webapp.yaml
+* kubectl get all
+
+Expose Service
+* minikube service $SERVICE_NAME
+
+K8 Cluster UI Dashboard
+* kubectl apply -f kubernetes-dashboard.yaml
+* kubectl apply -f service-account.yaml
+* kubectl -n kubernetes-dashboard create token admin-user
+* kubectl proxy
+* Open http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+
