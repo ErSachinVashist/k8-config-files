@@ -83,8 +83,8 @@ Access running POD
 
 ##### Demo Queries
     mongo --username sachinvashist82 --password LIZ7VVkpt0wtjAhE
-    
-    db.agenda.insertMany([{"title":"Introduction","desp":"What is kubernetes?","done":false},{"title":"Why Kubernetes","desp":"What problem Kubernetes solves","done":false},{"title":"Architecture","desp":"Kubernetes Architecture & Components","done":false},{"title":"Configurations","desp":"Kubernetes Configurations deep dive","done":false},{"title":"Cluster Setup","desp":"Cluster Setup in local using Minikube","done":false},{"title":"Live App","desp":"Deployed nextJs-mongoDb app on k8","done":false},{"title":"K8 Dashboard","desp":"Deploy and use k8 dashboard UI","done":false},{"title":"Q&A","desp":"Thanks for taking it easy","done":false}])
+    use codeacademy
+    db.agenda.insertMany([{"title":"Introduction","desp":"What is kubernetes?","done":false},{"title":"Why Kubernetes","desp":"What problem Kubernetes solves","done":false},{"title":"Architecture","desp":"Kubernetes Architecture & Components","done":false},{"title":"Configurations","desp":"Kubernetes Configurations deep dive","done":false},{"title":"Cluster Setup","desp":"Cluster Setup in local using Minikube","done":false},{"title":"Live App","desp":"Deployed nextJs-mongoDb app on k8","done":false},{"title":"K8 Dashboard","desp":"Deploy and use k8 dashboard UI","done":false},{"title":"Completed","desp":"Thanks for taking it easy","done":false}])
 
 
 K8 Cluster UI Dashboard
